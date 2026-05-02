@@ -4,7 +4,7 @@ import api from "../../api/axios";
 import { toast } from "react-hot-toast";
 import { MessageSquare, Heart, Share2 } from "lucide-react";
 import CreatePostModal from "../../components/posts/CreatePostModal";
-
+import profileImg from "../../assets/profile.png"
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -52,7 +52,7 @@ const Dashboard = () => {
                     <div className="flex items-center gap-3">
                       <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-primary to-tertiary">
                         <img
-                          src={post.user?.avatar}
+                          src={post.user?.avatar || profileImg}
                           alt={post.user?.name}
                           className="w-10 h-10 rounded-full bg-secondary object-cover border-2 border-black"
                         />
