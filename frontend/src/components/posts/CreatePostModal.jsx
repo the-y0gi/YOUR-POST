@@ -36,7 +36,7 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated, editData }) => {
   const handlePostSubmit = async (e) => {
     e.preventDefault();
     if (!text.trim() && !image && !preview) {
-      return toast.error("Bhai, kuch toh likh ya photo daal!");
+      return toast.error("Please write your post first!");
     }
 
     setLoading(true);

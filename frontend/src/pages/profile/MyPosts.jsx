@@ -27,13 +27,13 @@ const MyPosts = () => {
   }, [fetchMyPosts]);
 
   const handleDelete = async (postId) => {
-    if (!window.confirm("Bhai, pakka delete karna hai?")) return;
+    if (!window.confirm("Are you sure you want to delete this post?")) return;
     try {
       await api.delete(`/post/${postId}`);
-      toast.success("Post gayab ho gayi!");
+      toast.success("Post deleted successfully!");
       setPosts(posts.filter((p) => p._id !== postId));
     } catch (err) {
-      toast.error("Delete nahi ho payi!");
+      toast.error("Failed to delete post!");
     }
   };
 
