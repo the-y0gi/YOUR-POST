@@ -129,7 +129,7 @@ const MyPosts = () => {
         {!loading && posts.length === 0 && (
           <div className="text-center py-20 glass-card border-dashed">
             <p className="text-text-muted">
-              Studio khali hai... Kuch post karo!
+              Your studio is empty, make your first post...
             </p>
           </div>
         )}
