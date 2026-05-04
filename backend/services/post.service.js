@@ -79,7 +79,7 @@ exports.getMyPostsService = async (userId) => {
       user: userId,
       isDeleted: false,
     })
-    .populate("user", "name avatar")
+    // .populate("user", "name avatar")
     .sort({ createdAt: -1 });
 
   return posts;
